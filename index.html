@@ -10,7 +10,15 @@
       console.log(result);
     });
       
-    var notification = new Notification("Hi there!");
+    var Notification = window.Notification || window.mozNotification || window.webkitNotification;
+
+    function show() {
+        window.setInterval(function () {
+            var instance = new Notification("Пора выпить воды!");
+        }, 5000);
+
+        return false;
+    }
       
    </script>
     
